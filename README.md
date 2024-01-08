@@ -1,1 +1,259 @@
-# Beans-n-cream-website1
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <script
+      src="https://kit.fontawesome.com/e0ced9617e.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+            body{
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            .in {
+        background-color: black;
+
+      }
+      .in a{
+        color: rgb(137, 137, 135);
+        font-size: 20pt;
+        clear: right;
+        margin-right: 90px;
+        text-decoration: none;
+      }
+      .in a:hover{
+
+        background-color:rgb(137, 137, 135);
+          color: black;
+
+      }
+
+
+            h1 {
+              font-size: 40pt;
+            }
+            h3 {
+              color: burlywood;
+              font-size: 25pt;
+              text-align: center;
+            }
+
+            footer{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          background-color: black;
+      }
+      .footercont{
+          width: 100%;
+          padding: 70px 30px 20px;
+      }
+      .footertop {
+          background-color: black
+
+         box-sizing: border-box;
+         color:white;
+          max-width: 1250px;
+          margin: auto;
+          padding: 20px 20px 10px 10px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .footertop i {
+          font-size: 2em;
+          margin-right: 5px;
+        }
+
+        .logon {
+          font-size: 1.5em;
+        }
+      .smic{
+          display: flex;
+          justify-content: center;
+
+      }
+      .smic a{
+          text-decoration: none;
+          padding: 10px;
+          background-color: white;
+          margin: 10px;
+          border-radius: 50%;
+
+      }
+      .simc a i{
+      font-size: 2em;
+      color: black;
+      opacity: 0.9;
+      }
+      .smic a:link{
+          font-size: 2em;
+          color: black;
+          opacity: 0.9;
+      }
+      .smic a:visited{
+          font-size: 2em;
+          color: black;
+          opacity: 0.9;
+      }
+      .smic a:hover{
+          background-color:#111;
+          transition: 0.5s;
+
+      }
+      .smic a:hover i{
+      color: white;
+      transition: 0.5s;
+      }
+      .footerbottom{
+          background-color: #171515;
+
+         box-sizing: border-box;
+
+          max-width: 1250px;
+          margin: auto;
+          padding: 20px 20px 10px 10px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+
+
+      }
+      .footerbottom p{
+          color: white;
+      }
+      .desginer{
+          opacity: 0.7;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-weight: 400;
+          margin: 0px 5px;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <h1 style="color: white; background-color: black; text-align: center">
+      BEANS 'N CREAM CAFE
+    </h1>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Beans 'n Cream</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="HOMe_css.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="new8.html">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MENU_css.html">MENU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="branches.html">BRANCHES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="new 7.html">ORDER NOW</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">FEEDBACK</a>
+          </li>
+          <li class="nav-item active">
+            <a href="cafCalc.html" class="nav-link">CAFFEINE CALCULATOR</a>
+          </li>
+          <li class="nav-item">
+            <a href="sm.html" class="nav-link">SITE MAP</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <video autoplay muted style="display: block; width: 100%">
+      <source
+        src="WhatsApp Video 2023-12-03 at 4.57.24 PM.mp4"
+        type="video/mp4"
+        Your
+        browser
+        does
+        not
+        support
+        the
+        video
+        tag
+      />
+      my coffe
+    </video>
+    <figure>
+      <img
+        src="WhatsApp Image 2023-12-03 at 4.57.10 PM.jpeg"
+        width="100%"
+        type="img/jpg"
+      />
+    </figure>
+    <footer>
+      <div class="footercont">
+        <div class="footertop">
+          <i class="fa-solid fa-mug-hot"></i>
+          <span class="logon">Beans 'n Cream</span>
+        </div>
+        <div class="smic">
+          <a
+            href="https://www.facebook.com/salma.alnajjar.3?mibextid=ViGcVu"
+            target="_blank"
+          >
+            <i class="fa-brands fa-facebook"></i
+          ></a>
+
+          <a
+            href="https://instagram.com/cream_cafe04?igshid=MmVlMjlkMTBhMg=="
+            target="_blank"
+          >
+            <i class="fa-brands fa-instagram"></i
+          ></a>
+
+          <a href="tel:0796457535p00"> <i class="fa-solid fa-phone"></i></a>
+          <a
+            href="https://x.com/salmaalnajjar13?s=11&t=oTU438Yp5P-lIdid9ojSEQ"
+            target="_blank"
+          >
+            <i class="fa-brands fa-twitter"></i
+          ></a>
+          <a href="mailto:salmaalnajjar777@gmail.com"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+        <div class="footerbottom">
+          <p>
+            Copyright &copy; 2023; Designed by <span class="desginer">SNS</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
