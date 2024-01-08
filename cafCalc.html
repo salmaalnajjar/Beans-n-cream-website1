@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Orbitron&family=Yanone+Kaffeesatz:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stylesCal.css">
+  <title>Caffeine Calculator</title>
+  <script src="https://kit.fontawesome.com/e0ced9617e.js" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Beans 'n Cream</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="HOMe_css.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="new8.html">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="MENU_css.html">MENU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="branches.html">BRANCHES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="new 7.html">ORDER NOW</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">FEEDBACK</a>
+        </li>
+        <li class="nav-item active">
+          <a href="cafCalc.html" class="nav-link">CAFFEINE CALCULATOR</a>
+        </li>
+        <li class="nav-item">
+          <a href="sm.html" class="nav-link">SITE MAP</a>
+        </li>
+      </ul>
+
+    </div>
+    <p id="datetime"></p>
+    <script>
+      let date = new Date();
+      document.write(date);
+    </script>
+  </nav>
+  <div class="main">
+    <br>
+    <h1 id="myH1">Caffeine Calculator</h1>
+   
+    <div class="main">
+      <p class="lead" id="myP"> 
+        A safe caffeine limit is the amount of caffeine a person can consume without experiencing any
+        caffeine overdose symptoms.
+        <br> <br>
+
+        Determining a precise caffeine amount for everyone is challenging due to varying sensitivities and reactions
+        based on age, medical history, and tolerance.
+        <br> <br>
+
+        However, there is enough research available to make a recommendation based on an individual’s weight.
+      </p>
+    </div>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" class="in-calc"> <span id="s1" class="span"></span> <br><br>
+    <label for="age">Enter your age:</label>
+    <input type="text" id="age" class="in-calc"> <span id="s2" class="span"></span><br><br>
+    <label for="weight">Enter your weight in KGs:</label>
+    <input type="text" id="weight" class="in-calc"> <span id="s3" class="spAan"></span><br><br>
+    <label for="sex">Sex:</label>
+    <input type="radio" name="sex" id="male">male
+    <input type="radio" name="sex" id="female">female <span id="s4" class="span"></span> <br><br>
+    <label for="c">Are you :</label>
+    <input type="checkbox" name="preg" id="preg" value="preg"> Pregnant
+    <input type="checkbox" name="bf" id="bf" value="bf"> Breastfeeding
+    <input type="checkbox" name="n" id="n" value="n"> none <span id="s7" class="span"></span>
+
+    <br><br>
+
+   
+    <button type="submit" id="bt" onclick="calculateCaffeine()">Calculate!</button> <br> <br>
+    <div class="msg">
+      <h2 id="myH2"><span>Your result will appear here</span></h2>
+      <p id="w"></p>
+    </div>
+  </div>
+  <script>
+
+
+    function calculateCaffeine() {
+      const name = document.getElementById("name").value;
+      const age = Number(document.getElementById("age").value);
+      const weight = Number(document.getElementById("weight").value);
+      const preg = document.getElementById("preg");
+      const bf = document.getElementById("bf");
+      const n = document.getElementById("n");
+
+      let r1 = document.getElementById("male");
+      let r2 = document.getElementById("female");
+      let gender;
+
+      let isValid = true;
+
+      if (r1.checked === true) {
+        gender = 'male';
+      } else if (r2.checked === true) {
+        gender = 'female';
+      } else {
+        document.getElementById("s4").textContent = "Please select your gender!";
+        isValid = false;
+      }
+
+      if (name === "") {
+        document.getElementById("s1").textContent = "You must enter your name!";
+        isValid = false;
+      } else if (!isNaN(name)) {
+        document.getElementById("s1").textContent = "Name should not be a number.";
+        isValid = false;
+      }
+
+      if (isNaN(age) || age <= 0 || age > 100) {
+        document.getElementById("s2").textContent = "Please enter a valid age!";
+        isValid = false;
+      } else if (age < 18) {
+        document.getElementById("s2").textContent = "Sorry, you must be older than 18";
+        isValid = false;
+      }
+
+      if (weight < 30 || weight > 200 || isNaN(weight) || weight === null) {
+        document.getElementById("s3").textContent = "Please enter a valid weight!";
+        isValid = false;
+      }
+
+
+      if (preg.checked === true || bf.checked === true) {
+       
+        document.getElementById("w").innerHTML = "Since you are pregnant,breastfeeding or both:<br>The American College of Obstetricians and Gynecologists (ACOG) recommends that pregnant women limit their caffeine consumption to less than 200 mg.<br><br>So you better check with your doctor about your caffeine consumption";
+      }
+      else if (n.checked == true) {
+
+      } else {
+        document.getElementById("s7").textContent = 'You need to select at least one!';
+        isValid = false;
+      }
+
+      if (!isValid) {
+        return false;
+      }
+
+      
+      const avgCaf = 6;
+      let cafIntake = 6 * weight;
+
+      document.getElementById("myH2").innerHTML = `Name: ${name} <br><br>
+                Age: ${age} years <br><br>
+                Sex: ${gender}<br><br>
+                Your estimated daily caffeine = ${cafIntake} mg per day
+                <br> <br>
+                (Based on the average human body weight worldwide, research concludes that 6 mg/kg (of body weight) is appropriate for those with normal sensitivity to the caffeine molecule.)`;
+    }
+  </script>
+  <footer>
+    <div class="footercont">
+      <div class="footertop">
+        <i class="fa-solid fa-mug-hot"></i>
+        <span class="logon">Beans 'n Cream</span>
+      </div>
+      <div class="smic">
+        <a href="https://www.facebook.com/salma.alnajjar.3?mibextid=ViGcVu" target="_blank">
+          <i class="fa-brands fa-facebook"></i></a>
+
+        <a href="https://instagram.com/cream_cafe04?igshid=MmVlMjlkMTBhMg==" target="_blank">
+          <i class="fa-brands fa-instagram"></i></a>
+
+        <a href="tel:0796457535p00"> <i class="fa-solid fa-phone"></i></a>
+        <a href="https://x.com/salmaalnajjar13?s=11&t=oTU438Yp5P-lIdid9ojSEQ" target="_blank">
+          <i class="fa-brands fa-twitter"></i></a>
+        <a href="mailto:salmaalnajjar777@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <div class="footerbottom">
+        <p>
+          Copyright &copy; 2023; Designed by <span class="desginer">SNS</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
